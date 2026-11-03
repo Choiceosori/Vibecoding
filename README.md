@@ -1,26 +1,28 @@
-# SHIPLAB — 웹앱 배포 실습 시뮬레이터
+# SHIPLAB — AI 자동 푸시 → GitHub → Vercel 웹앱 배포 실습
 
-ChatGPT에서 코드를 만들고 GitHub에 저장한 뒤 Vercel로 배포하는 과정을 연습하는 **비공식 교육용 웹앱**입니다.
+교육용 웹앱 배포 시뮬레이터입니다. **배포 연습실 자체는 실제 Vercel로 배포됩니다.** 웹앱 속 로그인, 권한 승인, GitHub 푸시, 배포 로그는 모두 모의실습으로만 작동하며 실제 계정 정보를 입력하거나 실제 학생 저장소를 만들지 않습니다.
 
-## 실습 진행 순서
+## 기본 실습 순서
 
-1. ChatGPT와 유사한 화면에서 홈페이지 프롬프트 입력, 모의 HTML 생성, 코드 복사
-2. GitHub 홈페이지로 이동 → Sign in → 가상 로그인
-3. New repository → 저장소 생성 → Add file 메뉴 → Create new file
-4. index.html에 코드 붙여넣기 → Commit changes 팝업에서 커밋
-5. Vercel 홈페이지로 이동 → Log in → Continue with GitHub
-6. GitHub OAuth의 Authorize Vercel 팝업 → Install Vercel 팝업 → 저장소 접근 범위 선택
-7. Vercel 대시보드 → Add New → Project → GitHub 저장소 Import
-8. Framework Preset Other → Deploy → 모의 배포 로그 → 결과 페이지 Visit
+1. ChatGPT형 대화창에 홈페이지 프롬프트를 입력하고 전송합니다.
+2. 코딩 에이전트(Codex) 연습 화면에서 생성된 프로젝트 파일을 확인합니다.
+3. **GitHub 연결하고 푸시** → 모의 로그인 → 모의 `Authorize Codex` 팝업으로 GitHub 사용 권한을 승인합니다.
+4. `Publish to GitHub` 팝업에서 저장소 이름과 공개 여부를 선택하고 `Create repository & Push`를 누릅니다.
+5. AI가 저장소 생성, 파일 커밋 및 `main` 브랜치 푸시를 처리하는 모의 로그를 확인합니다.
+6. GitHub Code 탭에서 `index.html`을 눌러 올라간 코드와 커밋을 확인합니다.
+7. Vercel 홈 → Log In → Continue with GitHub → 권한 승인 팝업 → Install Vercel 순서로 연습합니다.
+8. Add New → Project → Git 저장소 Import → Framework Preset: Other → Deploy → Visit을 차례로 눌러 완성된 홈페이지를 확인합니다.
 
-## 안전 안내
+수동 복사·붙여넣기·커밋은 기본 실습에서 제외했습니다.
 
-- GitHub/Vercel 로그인과 권한 승인은 시뮬레이터 내부에서만 재현합니다.
-- 실제 계정 인증·권한 승인 및 GitHub·Vercel API 연동은 실행하지 않습니다.
-- 학생은 실제 비밀번호를 입력하지 않습니다. 비밀번호 표시창은 읽기 전용입니다.
-- 모의 URL 형식의 주소는 인터넷에 발급되지 않습니다.
-- 이 시뮬레이터 웹앱 자체는 실제 GitHub → Vercel에 공개 배포할 수 있습니다.
+## 사용법
 
-## Vercel 배포 방법
+GitHub 저장소를 Vercel에 연결하면 root의 `index.html`을 바로 배포할 수 있습니다. 별도 설치·빌드는 필요하지 않습니다. 브라우저 저장소를 사용하여 학습 진행을 보존하고, `처음부터` 버튼으로 초기화합니다.
 
-GitHub 저장소 Choiceosori/Vibecoding을 Vercel New Project에서 가져옵니다. Framework Preset은 Other, Root Directory는 `./`, Build Command는 사용하지 않습니다. root index.html이 시작 파일입니다.
+## 기능·안전 관련 주의 사항
+
+- 일반 ChatGPT에 연결하는 **GitHub 앱**의 일반 조회 기능과, 저장소에 직접 쓰기·푸시를 하는 **Codex와 같은 코딩 에이전트**의 작업은 다릅니다. 이 시뮬레이터에서는 학습 편의상 두 화면을 연결해서 보여 줍니다.
+- 로그인, OAuth 권한 승인, Github App 설치 등은 모두 모의 화면입니다. 비밀번호 입력창은 읽기 전용입니다. 학생은 실제 GitHub 또는 Vercel 계정이 필요하지 않습니다.
+- 푸시 결과의 GitHub 저장소와 배포 결과의 URL도 시뮬레이터 내의 가상 객체입니다.
+- 실제 서비스 화면의 구조와 표현은 수시로 변경됩니다. 화면 유사도를 높이기 위해 2026년 공개된 공식 UI 참고 자료를 바탕으로 구성했으며, 모든 픽셀이 동일함을 보장하지는 않습니다.
+- ChatGPT/Codex, GitHub, Vercel의 비공식 교육용 시뮬레이터이며 각 서비스에서 제작·승인한 제품이 아닙니다.
