@@ -78,6 +78,33 @@
 
     .agent-push{padding:13px 24px}.agent-push .oauth-logos{margin:0 auto}.agent-push h2{margin:5px 0 2px}.agent-push .auth-sub{margin:4px 0 9px}.agent-push .form-label{margin:8px 0 4px}.agent-push .agent-form-help{margin:4px 0 7px}.agent-push .g-radio{padding:5px 8px;margin:5px 0}.agent-push .auth-permissions{padding:9px 11px;margin:8px 0!important}.agent-push .auth-permissions div{padding-top:4px}.agent-push .ghost-margin{margin-top:5px}
 
+
+    /* v4 · first-time-friendly explanations OUTSIDE service simulations */
+    .onboarding{margin:0 0 16px;border:1px solid #d4dfed;background:#fff;border-radius:17px;overflow:hidden;box-shadow:0 4px 14px #1c32400a}
+    .onboarding-top{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 20px}
+    .onboarding h2{font-size:18px;letter-spacing:-.6px;margin:0;color:#13243e}.onboarding .intro-strong{font-weight:750;color:#204e99}
+    .onboarding button{background:white;border:1px solid #d1dbe9;border-radius:8px;color:#415675;padding:7px 11px;font-size:12px;font-weight:700;white-space:nowrap}
+    .roles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #e7ebf2;gap:0}
+    .role-box{padding:14px 18px;display:flex;align-items:start;gap:10px;min-width:0}
+    .role-box:not(:last-child){border-right:1px solid #e7ebf2}
+    .role-index{width:29px;height:29px;display:grid;place-items:center;background:#edf3ff;border:1px solid #dae6ff;border-radius:9px;flex:none;font-size:14px}
+    .role-box strong{display:block;font-size:14px;color:#18283f}.role-box p{font-size:13px;color:#617187;line-height:1.55;margin:3px 0 0}
+    .learn-panel{background:white;border:1px solid #d9e3ee;border-radius:16px;margin:0 0 18px;padding:20px 24px;box-shadow:0 5px 20px #152d470a;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(240px,.95fr);gap:20px}
+    .learn-overline{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:12px;color:#45617f;font-weight:850;margin-bottom:8px}
+    .learn-badge{display:inline-flex;align-items:center;border-radius:99px;background:#f0f5ff;color:#2c55a2;border:1px solid #d8e5ff;padding:4px 10px;font-size:12px;font-weight:800}
+    .learn-panel h2{font-size:22px;line-height:1.3;letter-spacing:-.7px;margin:0 0 9px;color:#15263d}
+    .learn-why{font-size:16px;color:#415370;line-height:1.75;margin:0 0 9px}
+    .learn-vocab{background:#f7f9fc;border-left:3px solid #82a5e6;border-radius:0 6px 6px 0;padding:8px 11px;color:#566881;font-size:13px;line-height:1.55}
+    .learn-right{background:#f7faff;border:1px solid #e1eafb;border-radius:12px;padding:15px 17px;display:flex;flex-direction:column;justify-content:center;gap:10px}
+    .learn-right-line{display:flex;gap:10px;align-items:start}.learn-icon{width:24px;height:24px;flex:none;display:grid;place-items:center;font-size:15px;background:white;border-radius:7px;color:#3763af}
+    .learn-right strong{display:block;font-size:14px;color:#203c64;margin-bottom:2px}.learn-right p{font-size:14px;line-height:1.65;margin:0;color:#455d7e}
+    .current-mission{border:2px solid #bed3f9;background:#fff}.current-mission .overline{font-size:12px}.current-mission h3{font-size:21px;letter-spacing:-.7px;line-height:1.35;margin:10px 0 7px}
+    .current-mission .mission-desc{font-size:16px;line-height:1.68;color:#2b466f;font-weight:650;margin:8px 0 15px}
+    .current-mission .hint-box{font-size:14px;line-height:1.65;padding:12px 13px}
+    .current-mission .toggle-row button{font-size:13px;padding:10px 6px}
+    .context-coach{font-size:13px!important;line-height:1.5!important;max-width:300px!important;font-weight:800}
+    @media(max-width:920px){.learn-panel{grid-template-columns:1fr;gap:14px;padding:18px}.learn-panel h2{font-size:20px}.learn-right{display:grid;grid-template-columns:1fr 1fr}.roles{grid-template-columns:1fr}.role-box{padding:11px 16px}.role-box:not(:last-child){border-right:0;border-bottom:1px solid #e7ebf2}}
+    @media(max-width:560px){.onboarding-top{padding:12px 14px}.onboarding h2{font-size:15px}.learn-panel{padding:16px}.learn-right{grid-template-columns:1fr}.learn-why{font-size:15px}.learn-panel h2{font-size:19px}.role-box p{font-size:12px}}
   </style>
 </head>
 <body>
@@ -85,7 +112,7 @@
 <script>
 (()=>{
   const STORAGE='ship-lab-v3-ai-push';
-  const defaults=()=>({stage:'chat',chatScreen:'input',prompt:'',kind:'',code:'',clip:'',agentConnected:false,agentLogStep:0,pushCount:0,repoScreen:'landing',githubLoggedIn:false,githubFileOpen:false,githubUser:'demo-student',githubMenu:false,githubAppInstalled:false,githubAuthorized:false,authScope:'selected',modal:'',modalReturn:'',vercelLoggedIn:false,vercelMenu:false,repoFilter:'',repoName:'my-first-website',visibility:'public',repoCreated:false,fileName:'index.html',editorCode:'',committedCode:'',commitMessage:'Add index.html',commitCount:0,vercelScreen:'landing',projectName:'',selectedRepo:false,framework:'Other',deployed:false,deployedCode:'',guide:true,hint:false,deployLogStep:0});
+  const defaults=()=>({stage:'chat',chatScreen:'input',prompt:'',kind:'',code:'',clip:'',agentConnected:false,agentLogStep:0,pushCount:0,repoScreen:'landing',githubLoggedIn:false,githubFileOpen:false,githubUser:'demo-student',githubMenu:false,githubAppInstalled:false,githubAuthorized:false,authScope:'selected',modal:'',modalReturn:'',vercelLoggedIn:false,vercelMenu:false,repoFilter:'',repoName:'my-first-website',visibility:'public',repoCreated:false,fileName:'index.html',editorCode:'',committedCode:'',commitMessage:'Add index.html',commitCount:0,vercelScreen:'landing',projectName:'',selectedRepo:false,framework:'Other',deployed:false,deployedCode:'',guide:true,hint:false,basicsOpen:true,everDeployed:false,deployLogStep:0});
   let s;try{s={...defaults(),...JSON.parse(localStorage.getItem(STORAGE)||'{}')}}catch(e){s=defaults()}
   let deployTimer=null,agentTimer=null;
   const $=q=>document.querySelector(q);
@@ -123,7 +150,7 @@
       content=`<div class="oauth-pane"><div class="oauth-logos"><span class="oauth-gh">${svgGithub}</span><span class="oauth-arrows">↔</span><span class="oauth-gh">✳</span></div><h2>Authorize Codex</h2><p class="auth-sub">코딩 에이전트에서 <b>${esc(s.githubUser)}</b> 계정의 저장소를 사용하도록 모의 승인합니다.</p><div class="auth-permissions"><b>Requested permissions</b><div>✓ &nbsp;Confirm your GitHub identity</div><div>✓ &nbsp;Create a repository for this exercise</div><div>✓ &nbsp;Commit and push source files</div></div><div class="safe-login">실제 GitHub OAuth 권한은 요청하지 않습니다. 팝업의 버튼도 시뮬레이터 안에서만 작동합니다.</div><button data-action="agent-authorize" class="auth-green full ${s.guide?'focus-target':''}">Authorize Codex (모의 승인)</button><button class="g-btn full ghost-margin" data-action="modal-close">Cancel</button></div>`;
     }else if(s.modal==='agent-push'){
       url='chatgpt.com/codex/github/publish';
-      content=`<div class="agent-modal agent-push"><div class="oauth-logos"><span class="oauth-gh">✳</span><span class="oauth-arrows">→</span><span class="oauth-gh">${svgGithub}</span></div><h2>Publish to GitHub</h2><p class="auth-sub">AI가 새 저장소를 만들고 <b>main</b> 브랜치에 코드를 직접 푸시합니다.</p><label class="form-label" for="agent-repo-name">Repository name</label><input id="agent-repo-name" class="input" value="${esc(s.repoName)}" placeholder="my-first-website"><p class="agent-form-help">Owner: ${esc(s.githubUser)} &nbsp;·&nbsp; Branch: main</p><div class="g-radio"><label><input type="radio" name="agent-visibility" value="public" ${s.visibility==='public'?'checked':''}> &nbsp;<b>Public</b> · 누구나 저장소 열람</label></div><div class="g-radio"><label><input type="radio" name="agent-visibility" value="private" ${s.visibility==='private'?'checked':''}> &nbsp;<b>Private</b> · 허용된 사용자만 열람</label></div><div class="auth-permissions" style="margin:13px 0"><b>Changes to be pushed</b><div>＋ index.html &nbsp; · &nbsp; Initial website created by AI</div></div><button data-action="agent-push" class="auth-green full ${s.guide?'focus-target':''}">Create repository & Push →</button><button data-action="modal-close" class="g-btn full ghost-margin">Cancel</button></div>`;
+      content=`<div class="agent-modal agent-push"><div class="oauth-logos"><span class="oauth-gh">✳</span><span class="oauth-arrows">→</span><span class="oauth-gh">${svgGithub}</span></div><h2>${s.repoCreated?'Push updates to GitHub':'Publish to GitHub'}</h2><p class="auth-sub">${s.repoCreated?'이미 만들어 둔 저장소를 그대로 사용해요. AI가 수정된 파일을 커밋하고 푸시합니다.':'AI가 새 저장소를 만들고 <b>main</b> 브랜치에 코드를 직접 푸시합니다.'}</p><label class="form-label" for="agent-repo-name">Repository name</label><input id="agent-repo-name" class="input" value="${esc(s.repoName)}" ${s.repoCreated?'readonly aria-label="기존 저장소 이름"':''} placeholder="my-first-website"><p class="agent-form-help">Owner: ${esc(s.githubUser)} &nbsp;·&nbsp; Branch: main</p><div class="g-radio"><label><input type="radio" name="agent-visibility" value="public" ${s.visibility==='public'?'checked':''}> &nbsp;<b>Public</b> · 누구나 저장소 열람</label></div><div class="g-radio"><label><input type="radio" name="agent-visibility" value="private" ${s.visibility==='private'?'checked':''}> &nbsp;<b>Private</b> · 허용된 사용자만 열람</label></div><div class="auth-permissions" style="margin:13px 0"><b>Changes to be pushed</b><div>＋ index.html &nbsp; · &nbsp; Initial website created by AI</div></div><button data-action="agent-push" class="auth-green full ${s.guide?'focus-target':''}">${s.repoCreated?'Commit & Push updates →':'Create repository & Push →'}</button><button data-action="modal-close" class="g-btn full ghost-margin">Cancel</button></div>`;
     }else if(s.modal==='oauth'){
       url='github.com/login/oauth/authorize';
       content=`<div class="oauth-pane"><div class="oauth-logos"><span class="oauth-gh">${svgGithub}</span><span class="oauth-arrows">⇄</span><span class="oauth-vercel">▲</span></div><h2>Authorize Vercel</h2><p class="auth-sub">Vercel wants to access your GitHub account <b>${esc(s.githubUser)}</b></p><div class="auth-permissions"><b>Vercel would like permission to:</b><div>✓ &nbsp;Verify your GitHub identity</div><div>✓ &nbsp;See your repository metadata</div><div>✓ &nbsp;Request repository access to deploy projects</div></div><p class="auth-small">This authorization screen is a simulation. No personal account data is accessed.</p><button class="g-btn green full" data-action="oauth-allow">Authorize Vercel (모의 승인)</button><button class="g-btn full ghost-margin" data-action="modal-close">Cancel</button></div>`;
@@ -154,7 +181,7 @@
     `<div class="chat-prompt">${esc(s.prompt)}</div>
      <div class="chat-reply"><div class="agent-hint"><span class="agent-icon">✳</span><div><strong>Codex · 코딩 에이전트 실습</strong><small>코드 생성 및 GitHub 작업을 가상으로 실행합니다</small></div><span class="agent-chip">교육용 모의 작업</span></div>
       <h4>${pushed?'GitHub 푸시가 완료되었습니다':pushing?'GitHub에 변경 사항을 푸시하고 있습니다':'요청하신 홈페이지를 만들었습니다!'}</h4>
-      <p>${pushed?'AI가 index.html 파일을 저장소에 커밋하고 main 브랜치에 푸시했습니다. 이제 GitHub 화면에서 확인해 보세요.':pushing?'코딩 에이전트가 저장소 생성부터 푸시까지 순서대로 처리하는 모의 작업입니다.':'이제 코드를 직접 복사할 필요가 없습니다. AI 코딩 에이전트의 GitHub 연결 권한을 승인하고 <b>GitHub에 푸시</b>해 보세요.'}</p>
+      <p>${pushed?'${s.everDeployed?'AI가 같은 저장소에 수정된 코드를 푸시했고, 연결된 Vercel 프로젝트가 자동 재배포되었습니다. GitHub에서 업데이트를 확인해 보세요.':'AI가 index.html 파일을 저장소에 커밋하고 main 브랜치에 푸시했습니다. 이제 GitHub 화면에서 확인해 보세요.'}':pushing?'코딩 에이전트가 저장소 생성부터 푸시까지 순서대로 처리하는 모의 작업입니다.':'이제 코드를 직접 복사할 필요가 없습니다. AI 코딩 에이전트의 GitHub 연결 권한을 승인하고 <b>GitHub에 푸시</b>해 보세요.'}</p>
       <div class="agent-workspace"><div class="agent-workspace-top"><span>▦ &nbsp; 파일 변경 사항</span><span class="agent-state ${pushed?'complete':''}">${pushed?'✓ Pushed':pushing?'● Pushing':'✓ Ready to push'}</span></div>
        <div class="agent-file-row"><span class="agent-file-icon">HTML</span><div><strong>index.html</strong><small>새로운 홈페이지 · 1 file changed</small></div><span class="agent-file-stat">+ ${Math.min(s.code.split('\n').length,150)} lines</span></div>
        ${pushing||pushed?`<div class="agent-log">${agentSteps.slice(0,pushed?4:s.agentLogStep+1).map((v,i)=>`<div><span class="agent-check">${pushed||i<s.agentLogStep?'✓':'◌'}</span>${v}</div>`).join('')}</div>`:''}
@@ -201,7 +228,7 @@
     if(s.modal==='agent-connect')return {title:'GitHub 연결 시작',desc:'Continue with GitHub를 눌러 코딩 에이전트와 GitHub를 연결해요.',hint:'실제 계정 없이 모의 연결만 진행해요.',coach:'Continue with GitHub를 눌러요.'};
     if(s.modal==='agent-signin')return {title:'GitHub 모의 로그인',desc:'체험용 사용자 이름을 확인하고 Sign in을 눌러요.',hint:'비밀번호는 입력하지 않습니다.',coach:'체험 계정으로 로그인해요.'};
     if(s.modal==='agent-permissions')return {title:'AI의 GitHub 작업 권한 승인',desc:'Authorize Codex 버튼을 눌러 모의 접근 권한을 승인해요.',hint:'실제 GitHub에서의 승인 창을 교육용으로 재현했어요.',coach:'권한 내용을 읽고 승인해요.'};
-    if(s.modal==='agent-push')return {title:'AI가 저장소 만들고 푸시하기',desc:'저장소 이름을 확인하고 Create repository & Push를 눌러요.',hint:'직접 파일을 복사하거나 커밋할 필요가 없어요.',coach:'저장소 이름 확인 후 푸시해요.'};
+    if(s.modal==='agent-push')return {title:s.repoCreated?'기존 저장소에 수정본 푸시하기':'AI가 저장소 만들고 푸시하기',desc:s.repoCreated?'저장소는 이미 있어요. Commit & Push updates를 눌러 변경 사항만 올려요.':'저장소 이름을 확인하고 Create repository & Push를 눌러요.',hint:'직접 파일을 복사하거나 커밋할 필요가 없어요.',coach:s.repoCreated?'기존 저장소에 변경 사항을 올려요.':'저장소 이름 확인 후 푸시해요.'};
     if(s.modal==='oauth')return {title:'GitHub에서 Vercel 연결 승인',desc:'Vercel이 GitHub 저장소에 연결하도록 승인해요.',hint:'모의 권한 요청 팝업입니다.',coach:'Authorize Vercel을 눌러요.'};
     if(s.modal==='install')return {title:'Vercel 저장소 접근 범위',desc:'Only select repositories를 선택하고 Install을 눌러요.',hint:'필요한 저장소만 허용하는 것이 좋아요.',coach:'저장소를 선택하고 설치해요.'};
     if(s.modal==='commit')return {title:'수동 커밋 연습',desc:'커밋 메시지를 확인하고 저장해요.',hint:'수동 경로를 선택한 경우에만 사용합니다.',coach:'커밋 메시지를 확인해요.'};
@@ -210,6 +237,44 @@
     if(s.stage==='vercel')return ({landing:{title:'Vercel 홈페이지',desc:'Log In을 눌러 로그인 화면으로 이동해요.',hint:'GitHub에 올린 사이트를 인터넷에 게시하는 서비스예요.',coach:'Log In을 눌러요.'},login:{title:'Vercel 로그인',desc:'Continue with GitHub를 눌러 GitHub 계정과 연동해요.',hint:'실제 비밀번호는 입력하지 않습니다.',coach:'Continue with GitHub를 눌러요.'},dashboard:{title:'Vercel 새 프로젝트 생성',desc:'Add New → Project를 눌러요.',hint:'Vercel에서 Git 저장소를 불러오는 단계예요.',coach:'Add New를 눌러요.'},import:{title:'저장소 선택하기',desc:'AI가 푸시한 저장소의 Import 버튼을 눌러요.',hint:'목록에서 GitHub 저장소 이름을 확인해요.',coach:'Import를 눌러요.'},configure:{title:'배포 설정 확인하기',desc:'Framework Preset을 Other로 선택하고 Deploy를 눌러요.',hint:'HTML 단일 파일은 별도의 빌드 명령이 필요 없어요.',coach:'설정을 확인하고 Deploy를 눌러요.'},deploying:{title:'배포 로그 확인하기',desc:'Vercel이 GitHub에서 파일을 가져오는 과정을 확인해요.',hint:'배포 로그는 가상으로 재현했습니다.',coach:'배포가 끝나는지 확인해요.'},success:{title:'홈페이지 완성!',desc:'Visit을 눌러 완성된 홈페이지를 확인해요.',hint:'표시된 vercel.app 주소는 가상의 예시 주소입니다.',coach:'Visit을 눌러 결과를 확인해요.'}})[s.vercelScreen];
     return {title:'전체 실습 완료',desc:'AI에서 푸시하고 GitHub에서 확인한 뒤 Vercel로 배포했어요.',hint:'다른 주제도 연습할 수 있어요.',coach:'새 실습을 시작해 봐요.'};
   }
+  // The explanation changes with every learner-visible screen, including login dialogs.
+  // Time labels describe common real-world usage, not permanent authentication guarantees.
+  function learningInfo(){
+    if(s.modal){
+      const modalInfo={
+        'agent-connect':['왜 GitHub를 AI에 연결할까요?','AI가 작성한 파일을 인터넷 저장소에 올리려면, 코딩 에이전트가 어느 GitHub 계정에서 작업할지 알아야 해요.','처음 연결할 때','같은 계정과 연결을 유지하면 보통 다시 연결하지 않아요. 연결이 끊어지거나 권한이 바뀌면 다시 요청될 수 있어요.','AI 코딩 에이전트: 홈페이지 파일을 만들고 GitHub로 올리는 작업까지 돕는 도구'],
+        'agent-signin':['왜 GitHub 로그인이 필요할까요?','만든 홈페이지 파일이 누구의 저장소에 들어갈지 확인하는 단계예요. 이 연습에서는 진짜 비밀번호를 사용하지 않아요.','계정 만들기는 최초 1회','실제 서비스에서는 로그인 상태가 유지되면 다음부터 생략돼요. 세션이 만료되면 다시 로그인할 수 있어요.','로그인: 내가 가진 계정임을 서비스에 확인하는 과정'],
+        'agent-permissions':['왜 접근 권한을 승인할까요?','AI가 내 허락 없이 GitHub 파일을 바꾸면 안 되기 때문이에요. 어떤 일을 허용하는지 읽고, 필요한 권한만 승인하는 연습이에요.','연결할 때 주로 1회','연결이 유지되면 매번 승인하지 않아요. 권한이 추가되거나 연결을 다시 만들 때는 재승인이 필요할 수 있어요.','권한: 앱이 내 저장소에서 해도 되는 작업의 범위'],
+        'agent-push':['저장소를 만들고 푸시하는 이유는?','GitHub에 홈페이지 파일을 보관하면 Vercel이 그 파일을 가져와 사이트로 공개할 수 있어요. 이제 AI가 파일 업로드와 커밋을 대신해요.','새 홈페이지마다 저장소 준비','새 프로젝트는 새 저장소를 만들 수 있어요. 이미 만든 사이트를 수정할 때는 같은 저장소에 새 커밋을 푸시하면 됩니다.','푸시(Push): 작업한 코드를 GitHub 같은 원격 저장소에 올리는 것'],
+        'oauth':['왜 Vercel에서 GitHub 승인이 필요할까요?','Vercel이 GitHub에 보관된 홈페이지 파일을 가져올 수 있도록 두 서비스의 연결을 허용하는 과정이에요.','최초 연결할 때 주로 1회','이미 연동되어 있다면 새 사이트를 배포할 때 보통 이 화면을 다시 거치지 않아요. 연결 상태에 따라 재승인이 필요할 수 있어요.','연동: 서로 다른 서비스가 필요한 정보를 주고받도록 연결하는 것'],
+        'install':['왜 저장소 접근 범위를 선택할까요?','Vercel이 읽어도 되는 GitHub 저장소를 정하는 단계예요. 모든 저장소 대신 필요한 저장소만 선택하면 권한을 좁힐 수 있어요.','계정·조직에 처음 설치할 때','나중에 다른 저장소를 배포하려면 접근 허용 목록에 새 저장소를 추가해야 할 수 있어요.','저장소 접근: Vercel이 어떤 프로젝트 파일을 읽을 수 있는지 지정'],
+        'commit':['커밋은 왜 필요할까요?','파일을 언제, 어떻게 수정했는지 GitHub에 기록하기 위해서예요. 이번 기본 실습에서는 AI가 커밋을 자동으로 수행합니다.','파일 변경을 기록할 때마다','코드를 수정하면 새 커밋을 남겨야 GitHub와 Vercel에 변경 내용이 반영됩니다.','커밋(Commit): 파일 변경을 하나의 기록으로 저장하는 것']
+      };
+      if(modalInfo[s.modal]){const [title,why,when,after,term]=modalInfo[s.modal];if(s.modal==='agent-push'&&s.repoCreated)return {title:'기존 GitHub 저장소에 수정된 코드를 올려요',why:'한 번 만든 저장소는 계속 사용하면 돼요. AI가 수정 내용을 새 커밋으로 기록하고 같은 저장소에 푸시합니다.',when:'코드를 수정해서 올릴 때마다',after:'Vercel 프로젝트가 이미 이 저장소에 연결되어 있으면 새 푸시를 감지해 자동으로 재배포합니다.',term:'재푸시 = 기존 저장소에 새로운 코드 변경 사항을 올리는 작업'};return {title,why,when,after,term}}
+    }
+    if(s.stage==='chat'){
+      if(s.chatScreen==='input')return {title:'AI가 알아듣도록 무엇을 만들지 알려줘요',why:'프롬프트는 AI에게 건네는 작업 설명이에요. 프로그래밍 언어를 몰라도 원하는 홈페이지의 목적과 모습을 일상적인 말로 적을 수 있어요.',when:'새로 만들거나 고칠 때마다',after:'처음부터 완벽하게 쓸 필요는 없어요. 결과를 보고 “색을 바꿔줘”처럼 다시 요청하면 됩니다.',term:'프롬프트(Prompt) = AI에게 원하는 일을 설명하는 문장'};
+      if(s.chatScreen==='response')return {title:'AI가 만든 코드를 GitHub에 보낼 준비를 해요',why:'AI 채팅 안에서 만든 코드만으로는 다른 사람이 접속할 홈페이지 주소가 생기지 않아요. 코딩 에이전트가 GitHub에 파일을 올리면 Vercel에서 배포할 수 있어요.',when:'GitHub 연결은 처음에 주로 1회',after:'한번 연결해 두면 다음 코드 수정 때는 같은 저장소로 계속 푸시할 수 있어요. 이 실습에서는 연결 절차도 연습합니다.',term:'GitHub = 홈페이지 코드 파일을 보관하고 변경 기록을 남기는 서비스'};
+      if(s.chatScreen==='pushing')return {title:'AI가 코드를 GitHub에 올리고 있어요',why:'푸시는 컴퓨터나 코딩 에이전트의 변경 내용을 GitHub 저장소로 보내는 과정이에요. 변경 기록인 커밋도 함께 남습니다.',when:'코드를 수정해 올릴 때마다',after:'기존 Vercel 프로젝트가 GitHub에 연결되어 있다면, 이후에는 새 푸시를 감지해 자동으로 다시 배포할 수 있어요.',term:'커밋 = 변경 기록 저장 / 푸시 = 그 기록을 GitHub로 올리기'};
+      return {title:'AI가 푸시를 마쳤어요. GitHub에서 확인해요',why:'실제로 파일이 올라왔는지 확인하면 다음 단계에서 잘못된 저장소를 가져오는 일을 줄일 수 있어요.',when:'푸시 후 확인하면 좋아요',after:'다음부터는 같은 GitHub 저장소를 계속 사용할 수 있어요. 새 홈페이지를 만들 때만 별도 저장소가 필요할 수 있습니다.',term:'저장소(Repository) = 홈페이지 관련 파일을 모아 보관하는 온라인 폴더'};
+    }
+    if(s.stage==='github')return {title:'GitHub는 웹사이트 파일을 보관하는 곳이에요',why:'GitHub 저장소에 index.html 등 홈페이지 파일과 수정 기록이 남아 있어요. Vercel은 이 저장소를 연결해 사이트를 공개합니다.',when:'저장소 만들기는 새 프로젝트마다',after:'한번 만들어진 저장소는 계속 사용해요. AI가 수정한 코드를 같은 저장소에 푸시하면 새로운 커밋이 쌓입니다.',term:'index.html = 브라우저가 홈페이지를 열 때 시작점으로 사용하는 대표 파일'};
+    if(s.stage==='vercel'){
+      const maps={
+        landing:['Vercel은 코드를 웹주소로 공개하는 서비스예요','GitHub에 파일이 있어도 일반 사용자가 웹사이트처럼 접속할 주소가 자동으로 생기는 것은 아니에요. Vercel이 파일을 배포합니다.','서비스 가입은 최초 1회','이후 사이트를 추가할 때는 기존 계정으로 새 프로젝트를 만들면 됩니다.','배포(Deploy) = 홈페이지를 인터넷에서 열 수 있도록 게시하는 작업'],
+        login:['왜 Vercel에 로그인해야 할까요?','GitHub에 있는 코드를 어느 Vercel 계정에 배포할지 결정하려면 계정 연결이 필요해요.','계정 생성은 최초 1회','로그인 상태가 유지되면 다시 로그인하지 않아도 돼요. 세션이 만료되면 다시 로그인할 수 있어요.','Continue with GitHub = GitHub 계정을 이용해 Vercel에 로그인하는 방법'],
+        dashboard:['새 프로젝트는 왜 만들까요?','Vercel 프로젝트는 GitHub 저장소와 실제 홈페이지 주소를 연결해 관리하는 단위예요.','새 홈페이지마다 최초 1회','연결 후에는 GitHub에 새 코드를 푸시할 때 Vercel이 자동 재배포할 수 있어요.','프로젝트 = 저장소·배포 설정·접속 주소를 함께 관리하는 묶음'],
+        import:['왜 GitHub 저장소를 가져올까요?','Vercel에 “어느 GitHub 저장소를 웹사이트로 공개할지” 알려주는 단계예요. AI가 올린 저장소를 선택해야 합니다.','사이트별 연결 최초 1회','같은 저장소의 코드가 바뀌면 보통 다시 Import할 필요가 없어요. 연결이 유지되면 자동 배포가 이루어집니다.','Import = 다른 서비스의 프로젝트를 불러와 연결하기'],
+        configure:['배포 설정을 왜 확인할까요?','Vercel이 코드를 어떤 방식으로 실행하거나 공개할지 결정해요. 이번 예제는 HTML 파일 하나라서 Other를 선택합니다.','새 프로젝트 배포 시 최초 1회','프로젝트 설정은 저장되므로 다음 푸시마다 같은 항목을 반복 입력할 필요가 없어요.','Framework Preset = 프로젝트가 사용하는 웹 개발 도구의 종류'],
+        deploying:['GitHub 파일을 실제 사이트로 준비하는 단계예요','Vercel이 연결된 GitHub 저장소의 파일을 가져와 웹사이트로 사용할 수 있도록 배포합니다.','첫 배포 후에는 대부분 자동','나중에 GitHub main 브랜치에 푸시하면 설정에 따라 자동으로 새로운 프로덕션 배포가 시작됩니다.','배포 로그 = 파일을 가져오고 공개하는 작업 과정을 보여 주는 기록'],
+        success:['이제 홈페이지 주소로 접속하는 과정을 알아봐요','배포가 끝나면 접속 주소가 제공돼요. 실제 프로젝트라면 이 주소를 다른 사람에게 공유할 수 있습니다.','새 프로젝트는 첫 배포 1회','다음부터는 같은 저장소를 수정하고 푸시하면 연결된 Vercel 프로젝트가 자동으로 다시 배포할 수 있어요.','Visit = 배포된 홈페이지 열기']
+      };
+      const [title,why,when,after,term]=maps[s.vercelScreen]||maps.landing;return {title,why,when,after,term};
+    }
+    return {title:'축하해요! 세 서비스의 역할을 구분할 수 있어요',why:'AI가 코드를 만들고 GitHub가 저장하며 Vercel이 인터넷에 공개하는 흐름을 체험했습니다. 실제 계정과 저장소를 연결하면 같은 원리로 배포할 수 있어요.',when:'새 홈페이지를 시작할 때',after:'이미 배포한 홈페이지는 AI로 수정 → GitHub 푸시 → Vercel 자동 재배포의 흐름으로 관리할 수 있어요.',term:'이 교육용 시뮬레이터 내부에는 실제 배포나 비밀번호 입력이 없습니다.'};
+  }
+  function basics(){return `<section class="onboarding" aria-label="세 서비스의 역할"><div class="onboarding-top"><h2><span class="intro-strong">처음이라면 이것만 기억해요.</span> AI가 만들고, GitHub가 보관하고, Vercel이 공개해요.</h2><button data-action="toggle-basics" aria-expanded="${s.basicsOpen?'true':'false'}">${s.basicsOpen?'간단히 접기 −':'역할 다시 보기 +'}</button></div>${s.basicsOpen?`<div class="roles"><div class="role-box"><span class="role-index">✳</span><div><strong>AI 코딩 에이전트 · 제작자</strong><p>말로 설명하면 홈페이지 코드를 만들고 수정해요.</p></div></div><div class="role-box"><span class="role-index">⌁</span><div><strong>GitHub · 보관함</strong><p>AI가 만든 코드를 저장하고 변경 기록을 남겨요.</p></div></div><div class="role-box"><span class="role-index">▲</span><div><strong>Vercel · 게시판</strong><p>GitHub 파일을 인터넷에서 열리는 사이트로 배포해요.</p></div></div></div>`:''}</section>`}
+  function learningPanel(){const a=learningInfo(),d=detail();return `<section class="learn-panel" aria-label="현재 단계의 의미와 반복 여부"><div><div class="learn-overline">📘 지금 배우는 개념 <span class="learn-badge">왜 이 과정이 필요할까요?</span></div><h2>${esc(a.title)}</h2><p class="learn-why">${esc(a.why)}</p><div class="learn-vocab">💬 <b>용어 이해하기</b> · ${esc(a.term)}</div></div><div class="learn-right"><div class="learn-right-line"><span class="learn-icon">🕒</span><div><strong>이 과정은 언제 하나요?</strong><p><b>${esc(a.when)}</b></p></div></div><div class="learn-right-line"><span class="learn-icon">↻</span><div><strong>다음부터는 어떻게 하나요?</strong><p>${esc(a.after)}</p></div></div></div></section>`}
   function progress(){let n=0;if(s.code)n+=20;if(s.githubLoggedIn)n+=12;if(s.agentConnected)n+=12;if(s.pushCount)n+=21;if(s.vercelLoggedIn)n+=9;if(s.githubAppInstalled)n+=9;if(s.deployed)n+=13;if(s.stage==='result')n+=4;return Math.min(n,100)}
   function aside(){const d=detail();return `<aside class="sidebar"><section class="panel"><div class="overline">실습 진행률</div><div class="panel-row" style="margin-top:8px"><strong style="font-size:17px">완료까지 ${progress()}%</strong><span class="textmuted">${stageIndex()+1} / 4 단계</span></div><div class="progress-track"><div class="progress-fill" style="width:${progress()}%"></div></div>${[['AI 홈페이지 생성',!!s.code],['GitHub 연결 승인',s.agentConnected],['AI의 자동 푸시',s.pushCount>0],['GitHub 결과 확인',s.stage!=='chat'],['Vercel 모의 로그인',s.vercelLoggedIn],['GitHub 앱 연결',s.githubAppInstalled],['모의 사이트 배포',s.deployed]].map(([name,done],i)=>`<div class="mini-check ${done?'complete':''}"><b>${done?'✓':i+1}</b> ${name}</div>`).join('')}</section><section class="panel current-mission"><div class="overline">지금 할 일</div><h3>${esc(d.title)}</h3><p class="mission-desc">${esc(d.desc)}</p><div class="toggle-row"><button class="${s.guide?'selected':''}" data-action="guide-on">안내 모드</button><button class="${!s.guide?'selected':''}" data-action="guide-off">도전 모드</button></div>${s.guide?`<div class="hint-box">💡 ${esc(d.hint)}</div>`:`<button class="hint-btn" data-action="hint-toggle">${s.hint?'힌트 접기':'힌트 보기'}</button>${s.hint?`<div class="hint-box">${esc(d.hint)}</div>`:''}`}</section><section class="panel"><div class="overline">지금까지의 작업</div><p>GitHub 체험 계정: <strong>${esc(s.githubUser)}</strong></p><p>저장소: <strong>${esc(s.repoName)}</strong></p><p>AI 푸시: <strong>${s.pushCount}회</strong></p><p>배포: <strong>${s.deployed?'완료':'대기 중'}</strong></p><hr class="g-hr"><div class="legal">⚑ 실제 계정이나 비밀번호를 받지 않습니다. ChatGPT/Codex, GitHub, Vercel의 비공식 교육용 시뮬레이터입니다.</div></section></aside>`}
 
@@ -226,7 +291,7 @@
     cue.style.left=Math.max(12,Math.min(r.left-a.left,w?a.width-cue.offsetWidth-12:0))+'px';
   }
   window.addEventListener('resize',()=>{if(s.guide)updateCoach()});
-  function render(){persist();const root=$('#app');root.innerHTML=`<header class="app-header"><div class="brand"><div class="brand-emblem">↗</div><div><div class="brand-title">배포 연습실 <span style="font-size:12px;color:#99aece;font-weight:400">SHIPLAB</span></div><div class="brand-sub">AI 코딩 에이전트 → GitHub → Vercel 실습</div></div></div><div class="header-right"><span class="chip">● &nbsp;가상 실습 환경</span><button class="reset" data-action="restart">↺ 처음부터</button></div></header><main class="shell"><div class="intro"><div><h1>AI가 GitHub에 푸시하고, Vercel로 배포하기</h1><p>프롬프트 입력 → AI 자동 푸시 → GitHub 확인 → Vercel 배포를 따라 해 보세요.</p></div><nav class="stepper" aria-label="실습 단계">${steps()}</nav></div><div class="workspace">${browser()}${aside()}</div></main>`;bindText();updateCoach();if(s.stage==='chat'&&s.chatScreen==='pushing'&&!agentTimer)startAgentPush();if(s.stage==='vercel'&&s.vercelScreen==='deploying'&&!deployTimer)startDeploy()}
+  function render(){persist();const root=$('#app');root.innerHTML=`<header class="app-header"><div class="brand"><div class="brand-emblem">↗</div><div><div class="brand-title">배포 연습실 <span style="font-size:12px;color:#99aece;font-weight:400">SHIPLAB</span></div><div class="brand-sub">AI 코딩 에이전트 → GitHub → Vercel 실습</div></div></div><div class="header-right"><span class="chip">● &nbsp;가상 실습 환경</span><button class="reset" data-action="restart">↺ 처음부터</button></div></header><main class="shell"><div class="intro"><div><h1>AI가 GitHub에 푸시하고, Vercel로 배포하기</h1><p>AI에게 요청하면 코드가 생성돼요. GitHub 저장 후 Vercel에서 공개하는 흐름을 체험해요.</p></div><nav class="stepper" aria-label="실습 단계">${steps()}</nav></div>${basics()}${learningPanel()}<div class="workspace">${browser()}${aside()}</div></main>`;bindText();updateCoach();if(s.stage==='chat'&&s.chatScreen==='pushing'&&!agentTimer)startAgentPush();if(s.stage==='vercel'&&s.vercelScreen==='deploying'&&!deployTimer)startDeploy()}
   function bindText(){
     const bindings=[['prompt-input','prompt'],['github-user','githubUser'],['repo-name','repoName'],['file-name','fileName'],['code-editor','editorCode'],['commit-message','commitMessage'],['project-name','projectName'],['repo-filter','repoFilter'],['agent-repo-name','repoName'],['agent-github-user','githubUser']];
     bindings.forEach(([id,key])=>{const el=$('#'+id);if(el)el.addEventListener('input',()=>{s[key]=el.value;persist();if(id==='repo-filter'){const at=el.selectionStart;render();const n=$('#repo-filter');if(n){n.focus();n.setSelectionRange(at,at)}}})});
@@ -243,7 +308,7 @@
     case 'copy-code':s.clip=s.code;persist();if(navigator.clipboard?.writeText)navigator.clipboard.writeText(s.code).catch(()=>{});notify('코드가 복사되었습니다. 기본 실습에서는 AI가 직접 푸시합니다.');break;
     case 'show-code-preview':showPreview(s.code);break;
     case 'next-github':if(!s.pushCount){notify('먼저 AI가 GitHub로 푸시하도록 해 주세요.');return;}s.stage='github';s.repoScreen='repo';render();break;
-    case 'connect-agent':if(!s.code){notify('프롬프트를 입력해 홈페이지를 먼저 만들어 주세요.');return;}s.modal='agent-connect';render();break;
+    case 'connect-agent':if(!s.code){notify('프롬프트를 입력해 홈페이지를 먼저 만들어 주세요.');return;}s.modal=s.agentConnected?'agent-push':'agent-connect';render();break;
     case 'agent-continue':s.modal=s.githubLoggedIn?'agent-permissions':'agent-signin';render();break;
     case 'agent-signin':if(!/^[a-zA-Z0-9-]{2,35}$/.test(s.githubUser)){notify('영문 2자 이상의 체험 계정 이름을 입력해 주세요.');return;}s.githubLoggedIn=true;s.modal='agent-permissions';render();notify('GitHub 모의 로그인 완료');break;
     case 'agent-authorize':s.agentConnected=true;s.modal='agent-push';render();notify('GitHub 연결 권한을 모의 승인했습니다.');break;
@@ -267,7 +332,7 @@
     case 'open-commit':if(s.fileName!=='index.html'){notify('파일 이름을 index.html로 지정하세요.');return;}if(!s.editorCode.trim()||!/<html[\s>]/i.test(s.editorCode)||!/<body[\s>]/i.test(s.editorCode)){notify('유효한 HTML 코드를 붙여넣어 주세요.');return;}s.modal='commit';render();break;
     case 'modal-close':s.modal='';render();break;
     case 'save-commit':if(!s.commitMessage.trim()){notify('커밋 메시지를 입력하세요.');return;}s.modal='';s.committedCode=s.editorCode;s.commitCount++;s.repoScreen='repo';if(s.deployed){s.deployed=false;s.deployedCode='';s.vercelScreen='dashboard'}render();notify('Commit changes 완료!');break;
-    case 'next-vercel':if(!s.commitCount){notify('GitHub에 코드를 커밋한 뒤 이동하세요.');return;}s.stage='vercel';s.vercelScreen=s.vercelLoggedIn?'dashboard':'landing';render();break;
+    case 'next-vercel':if(!s.commitCount){notify('GitHub에 코드를 커밋한 뒤 이동하세요.');return;}s.stage='vercel';s.vercelScreen=(s.everDeployed&&s.deployed)?'success':(s.vercelLoggedIn?'dashboard':'landing');render();break;
     case 'vercel-login':s.vercelScreen='login';render();break;
     case 'vercel-github-login':if(!s.githubLoggedIn){s.modal='oauth';s.modalReturn='login';render();return;}s.modal='oauth';render();break;
     case 'oauth-allow':s.githubAuthorized=true;s.modal='install';render();break;
@@ -280,6 +345,7 @@
     case 'deploy':if(!s.projectName.trim()){notify('프로젝트 이름을 입력하세요.');return;}if(s.framework!=='Other'){notify('HTML 단일 파일은 Framework Preset을 Other로 선택하세요.');return;}if(!s.githubAppInstalled||!s.committedCode){notify('GitHub 권한과 커밋된 파일을 확인하세요.');return;}s.vercelScreen='deploying';s.deployLogStep=0;render();break;
     case 'visit':if(!s.deployed){notify('배포를 완료한 뒤 방문하세요.');return;}s.stage='result';render();break;
     case 'edit-again':s.stage='chat';s.chatScreen='response';s.deployed=false;s.deployedCode='';render();notify('프롬프트를 수정하고 AI에 다시 푸시를 요청해 보세요.');break;
+    case 'toggle-basics':s.basicsOpen=!s.basicsOpen;render();break;
     case 'guide-on':s.guide=true;s.hint=false;render();break;
     case 'guide-off':s.guide=false;s.hint=false;render();break;
     case 'hint-toggle':s.hint=!s.hint;render();break;
@@ -292,11 +358,11 @@
     let x=s.agentLogStep;agentTimer=setInterval(()=>{
       if(s.stage!=='chat'||s.chatScreen!=='pushing'){clearInterval(agentTimer);agentTimer=null;return}
       x++;s.agentLogStep=x;
-      if(x>=3){clearInterval(agentTimer);agentTimer=null;s.chatScreen='pushed';render();notify('GitHub로 모의 푸시를 완료했어요!')}
+      if(x>=3){clearInterval(agentTimer);agentTimer=null;s.chatScreen='pushed';if(s.everDeployed){s.deployed=true;s.deployedCode=s.committedCode;s.vercelScreen='success';}render();notify(s.everDeployed?'GitHub 푸시 후 Vercel 자동 재배포가 완료됐어요!':'GitHub로 모의 푸시를 완료했어요!')}
       else render();
     },620)
   }
-  function startDeploy(){const steps=[0,1,2,3,4];let x=s.deployLogStep;deployTimer=setInterval(()=>{if(s.stage!=='vercel'||s.vercelScreen!=='deploying'){clearInterval(deployTimer);deployTimer=null;return;}x++;s.deployLogStep=x;if(x>=steps.length-1){clearInterval(deployTimer);deployTimer=null;s.deployed=true;s.deployedCode=s.committedCode;s.vercelScreen='success';render();notify('모의 배포가 완료되었습니다!')}else render()},880)}
+  function startDeploy(){const steps=[0,1,2,3,4];let x=s.deployLogStep;deployTimer=setInterval(()=>{if(s.stage!=='vercel'||s.vercelScreen!=='deploying'){clearInterval(deployTimer);deployTimer=null;return;}x++;s.deployLogStep=x;if(x>=steps.length-1){clearInterval(deployTimer);deployTimer=null;s.deployed=true;s.deployedCode=s.committedCode;s.everDeployed=true;s.vercelScreen='success';render();notify('모의 배포가 완료되었습니다!')}else render()},880)}
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&s.modal){s.modal='';render()}});
   document.addEventListener('click',e=>{const goBtn=e.target.closest('[data-go]');if(goBtn){go(goBtn.dataset.go);return}const btn=e.target.closest('[data-action]');if(btn)handle(btn.dataset.action)});
   render();
