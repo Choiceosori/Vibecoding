@@ -208,6 +208,44 @@
     @media(max-width:960px){.workspace{grid-template-columns:1fr}.sidebar{display:grid;grid-template-columns:1fr 1fr}.current-mission{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;gap:4px 17px}.current-mission .why-card{margin:0;border-top:0;border-left:1px solid #d9e5f6;padding:0 0 0 17px}.sidebar .compact-details{grid-column:span 2}.win-titlebar{height:33px}.win-brand{height:33px}.win-controls{height:33px}.win-controls span{height:33px}}
     @media(max-width:670px){.shell{padding:9px}.intro{align-items:flex-start;flex-direction:column}.stepper{justify-content:flex-start}.path-tabs{max-width:none}.path-copy strong{font-size:13px}.path-copy small{font-size:10px}.brand-title{font-size:13px}.brand-sub{display:none}.chip{display:none}.desktop-frame{padding:7px 7px 0}.windows-taskbar{margin:0 -7px}.sidebar{display:flex}.current-mission{display:block}.current-mission .why-card{margin-top:12px;border:0;border-top:1px solid #d9e5f6;padding:11px 0 0}.win-brand{display:none}.win-tab{max-width:180px;min-width:110px}.win-controls span{width:26px}.task-clock{display:none}}
     @media(prefers-reduced-motion:reduce){.wait-spinner,.thinking-dot i{animation:none}.focus-target{animation:none}}
+    /* v7: Chrome instead of Edge — functional multi-tab, address bar and new-tab page */
+    .chrome-titlebar{background:#dfe3eb;height:39px;align-items:center;padding:0 7px 0 9px;gap:7px}
+    .chrome-tablist{display:flex;align-items:end;gap:3px;min-width:0;flex:1;overflow:hidden;height:39px}
+    .chrome-tab{height:33px;min-width:0;max-width:205px;flex:0 1 185px;display:flex;align-items:center;border-radius:10px 10px 0 0;background:#d6dce6;color:#506079;position:relative;padding:0 4px 0 7px}
+    .chrome-tab.active{background:#fff;color:#263242;z-index:1}
+    .chrome-tab-activate{background:none;border:0;display:flex;align-items:center;gap:8px;min-width:0;flex:1;text-align:left;font-size:12px;color:inherit;padding:5px 4px}
+    .chrome-tab-label{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;max-width:100%}
+    .chrome-tab-close{border:0;background:none;color:#647284;display:grid;place-items:center;width:24px;height:24px;min-width:24px;border-radius:50%;font-size:16px;line-height:1}
+    .chrome-tab-close:hover{background:#c0c9d5}
+    .chrome-newtab-button{border:0;background:transparent;border-radius:50%;font-size:22px;color:#48566a;width:30px;min-width:30px;height:30px;display:grid;place-items:center;align-self:center;margin:0 4px 0 3px}
+    .chrome-newtab-button:hover{background:#c8d0da}
+    .chrome-titlebar .win-controls{height:39px;align-items:center;margin-left:auto}
+    .chrome-titlebar .win-controls span{height:39px}
+    .chrome-mark{display:inline-flex;align-items:center;justify-content:center;position:relative;width:19px;height:19px;min-width:19px;border-radius:50%;background:conic-gradient(#f0cb3a 0 125deg,#31a567 125deg 240deg,#e54b40 240deg 360deg);box-shadow:inset 0 0 0 1px #00000014}
+    .chrome-mark::before{content:'';width:10px;height:10px;border:1.3px solid #f8faff;border-radius:50%;background:#4286ec;box-shadow:0 0 0 1px #1c68d5}
+    .chrome-favicon{display:inline-grid;place-items:center;width:16px;height:16px;min-width:16px;font-size:15px;line-height:1;color:#222}
+    .chrome-favicon svg{width:16px!important;height:16px!important}
+    .chrome-favicon.vercel{color:#111}.chrome-favicon.result{color:#1674d8}.chrome-favicon.new{font-size:13px;color:#738398}
+    .chrome-address-row{gap:11px}.chrome-omnibox{display:flex;min-width:0;padding:0 10px;gap:7px;background:#f1f3f6;transition:background .15s,border .15s}
+    .chrome-omnibox:focus-within{background:white;border-color:#7ea6e6;box-shadow:0 0 0 2px #4e8bef1c}
+    .chrome-omnibox input{border:0;outline:none;box-shadow:none;background:transparent;font-size:12px;min-width:0;flex:1;color:#263242;height:100%;line-height:1.5}
+    .chrome-omnibox .lock{color:#738094;font-size:12px;min-width:15px;text-align:center}
+    .chrome-omnibox .address-note{color:#7a8795;font-size:10px;white-space:nowrap}
+    .chrome-top-right{color:#637082;font-size:18px;min-width:14px;line-height:1}
+    .chrome-newtab-page{min-height:602px;background:linear-gradient(170deg,#f8fafc,#e6eef9);display:flex;align-items:center;flex-direction:column;padding:79px 18px 38px;text-align:center}
+    .chrome-google-mark{font-family:Arial,sans-serif;font-size:62px;font-weight:600;letter-spacing:-4px;line-height:1.25;margin-bottom:26px}
+    .chrome-google-mark .blue{color:#4285f4}.chrome-google-mark .red{color:#ea4335}.chrome-google-mark .yellow{color:#fbbc05}.chrome-google-mark .green{color:#34a853}
+    .chrome-search-visual{width:min(580px,90%);border-radius:30px;border:1px solid #d5dce6;background:#fff;padding:15px 22px;box-shadow:0 3px 16px #22375c17;text-align:left;color:#8795a8;font-size:13px}
+    .chrome-newtab-help{margin:27px auto 0;width:min(525px,94%);background:#fff;border:1px solid #bed3ed;border-radius:14px;padding:19px 22px;box-shadow:0 8px 32px #2e5eaa10;text-align:left}
+    .chrome-newtab-help strong{font-size:18px;color:#213a61;display:block;margin-bottom:6px}
+    .chrome-newtab-help p{color:#5a718e;font-size:13px;margin:0 0 11px;line-height:1.6}
+    .chrome-domain-example{display:inline-flex;gap:9px;align-items:center;background:#eaf2ff;color:#2553a4;font-size:16px;font-weight:750;border-radius:9px;padding:8px 12px}
+    .chrome-shortcuts{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:17px}
+    .chrome-shortcut{display:flex;align-items:center;gap:8px;border:1px solid #e1e7ef;border-radius:12px;background:#fff;padding:11px 16px;font-weight:650;color:#405574}
+    .chrome-shortcut:hover{background:#eff5ff;border-color:#8cb0ee}
+    .chrome-shortcut:disabled{opacity:.5}
+    .chrome-browser-footnote{font-size:11px;color:#7a8ba1;margin-top:25px}
+    @media(max-width:670px){.chrome-titlebar{height:35px;padding-left:5px}.chrome-tablist{height:35px}.chrome-tab{height:29px;min-width:0;flex-basis:120px;padding-left:3px}.chrome-tab-activate{gap:5px;font-size:11px;padding:3px 0}.chrome-tab-close{min-width:18px;width:18px;height:18px;font-size:13px}.chrome-newtab-button{font-size:20px;width:25px;min-width:25px;margin:0 1px}.chrome-titlebar .win-controls span{width:20px;height:35px;font-size:13px}.chrome-omnibox .address-note{display:none}.chrome-google-mark{font-size:44px}.chrome-newtab-page{padding-top:58px}}
   </style>
 </head>
 <body>
@@ -215,11 +253,27 @@
 <script>
 (()=>{
   const STORAGE='ship-lab-v3-ai-push';
-  const defaults=()=>({stage:'chat',chatScreen:'input',prompt:'',kind:'',code:'',clip:'',agentConnected:false,agentLogStep:0,pushCount:0,repoScreen:'landing',githubLoggedIn:false,githubFileOpen:false,githubUser:'demo-student',githubMenu:false,githubAppInstalled:false,githubAuthorized:false,authScope:'selected',modal:'',modalReturn:'',vercelLoggedIn:false,vercelMenu:false,repoFilter:'',repoName:'my-first-website',visibility:'public',repoCreated:false,fileName:'index.html',editorCode:'',committedCode:'',commitMessage:'Add index.html',commitCount:0,vercelScreen:'landing',projectName:'',selectedRepo:false,framework:'Other',deployed:false,deployedCode:'',guide:true,hint:false,basicsOpen:false,everDeployed:false,deployLogStep:0,mode:'auto',modeSaves:{}});
+  const defaults=()=>({stage:'chat',chatScreen:'input',prompt:'',kind:'',code:'',clip:'',agentConnected:false,agentLogStep:0,pushCount:0,repoScreen:'landing',githubLoggedIn:false,githubFileOpen:false,githubUser:'demo-student',githubMenu:false,githubAppInstalled:false,githubAuthorized:false,authScope:'selected',modal:'',modalReturn:'',vercelLoggedIn:false,vercelMenu:false,repoFilter:'',repoName:'my-first-website',visibility:'public',repoCreated:false,fileName:'index.html',editorCode:'',committedCode:'',commitMessage:'Add index.html',commitCount:0,vercelScreen:'landing',projectName:'',selectedRepo:false,framework:'Other',deployed:false,deployedCode:'',guide:true,hint:false,basicsOpen:false,everDeployed:false,deployLogStep:0,mode:'auto',modeSaves:{},browserTabs:[{id:'chat',site:'chat'}],browserActiveTab:'chat',browserCounter:0,browserGoal:'',browserAddressDraft:'',browserError:''});
   let s;try{s={...defaults(),...JSON.parse(localStorage.getItem(STORAGE)||'{}')}}catch(e){s=defaults()}
   // A refreshed page must never become stuck on an interrupted AI waiting screen.
   if(s.chatScreen==='generating'){s.chatScreen='input';s.code=''}
   Object.values(s.modeSaves||{}).forEach(v=>{if(v?.chatScreen==='generating'){v.chatScreen='input';v.code=''}})
+  function normalizeBrowser(){
+    if(!Array.isArray(s.browserTabs)||!s.browserTabs.length)s.browserTabs=[{id:'chat',site:'chat'}];
+    if(!s.browserTabs.some(t=>t.id===s.browserActiveTab))s.browserActiveTab=s.browserTabs[0].id;
+    // v6 stored a single stage rather than a browser tab; preserve its progress on upgrade.
+    const active=s.browserTabs.find(t=>t.id===s.browserActiveTab);
+    if(active?.site!=='new'&&active?.site!==s.stage){
+      const existing=s.browserTabs.find(t=>t.site===s.stage);
+      if(existing)s.browserActiveTab=existing.id;
+      else{s.browserTabs.push({id:s.stage,site:s.stage});s.browserActiveTab=s.stage;}
+    }
+    s.browserCounter=Number.isInteger(s.browserCounter)?s.browserCounter:0;
+    s.browserGoal=s.browserGoal||'';
+    s.browserAddressDraft=s.browserAddressDraft||'';
+    s.browserError=s.browserError||'';
+  }
+  normalizeBrowser();
   let deployTimer=null,agentTimer=null,promptTimer=null,transitionTimer=null;
   const $=q=>document.querySelector(q);
   const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -250,6 +304,28 @@
     const previous=histories[mode]||{...defaults(),mode,guide:s.guide,basicsOpen:s.basicsOpen};
     s={...defaults(),...previous,mode,modeSaves:histories};
     render();notify(mode==='free'?'무료 버전: 코드를 복사해 GitHub에 직접 등록해요.':'자동 푸시 버전: AI가 GitHub 작업을 진행해요.');
+  }
+  function activeBrowserTab(){return s.browserTabs.find(t=>t.id===s.browserActiveTab)||s.browserTabs[0]}
+  function browserBlank(){return activeBrowserTab()?.site==='new'}
+  function siteLabel(site){return ({chat:'ChatGPT',github:'GitHub',vercel:'Vercel',result:'나의 홈페이지',new:'새 탭'})[site]||'새 탭'}
+  function tabFavicon(site){if(site==='github')return `<span class="chrome-favicon">${svgGithub}</span>`;if(site==='vercel')return '<span class="chrome-favicon vercel">▲</span>';if(site==='chat')return '<span class="chrome-favicon">✳</span>';if(site==='result')return '<span class="chrome-favicon result">🌐</span>';return '<span class="chrome-favicon new">◈</span>'}
+  function browserTabMarkup(t){const active=s.browserActiveTab===t.id;return `<div class="chrome-tab ${active?'active':''}" role="presentation"><button type="button" class="chrome-tab-activate" data-action="browser-select-tab" data-tab="${esc(t.id)}" title="${esc(siteLabel(t.site))} 탭 열기">${tabFavicon(t.site)}<span class="chrome-tab-label">${esc(siteLabel(t.site))}</span></button><button type="button" class="chrome-tab-close" data-action="browser-close-tab" data-tab="${esc(t.id)}" aria-label="${esc(siteLabel(t.site))} 탭 닫기">×</button></div>`}
+  function browserNewTab(){const goal=siteLabel(s.browserGoal),domain=({chat:'chatgpt.com',github:'github.com',vercel:'vercel.com',result:slug(s.projectName)+'.vercel.app'})[s.browserGoal]||'github.com';return `<div class="chrome-newtab-page"><div class="chrome-google-mark" aria-hidden="true"><span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span class="blue">g</span><span class="green">l</span><span class="red">e</span></div><div class="chrome-search-visual">⌕ &nbsp; Google 검색 또는 URL 입력</div><div class="chrome-newtab-help"><strong>새 탭이 열렸어요! ${s.browserGoal?goal+'에 접속해 볼까요?':'주소를 입력해 보세요.'}</strong><p>위쪽 주소창을 클릭하고 홈페이지 주소를 입력한 뒤 <b>Enter</b>를 눌러요. 기존 탭은 그대로 남습니다.</p><span class="chrome-domain-example">🔗 ${esc(domain)} &nbsp; ↵ Enter</span>${s.browserError?`<p style="color:#ba3434;margin-top:12px">${esc(s.browserError)}</p>`:''}</div><div class="chrome-shortcuts"><button class="chrome-shortcut" data-action="shortcut-chat">✳ &nbsp; ChatGPT</button><button class="chrome-shortcut" data-action="shortcut-github">${svgGithub} &nbsp; GitHub</button><button class="chrome-shortcut" data-action="shortcut-vercel">▲ &nbsp; Vercel</button></div><div class="chrome-browser-footnote">교육용 가상 Chrome · 실제 사이트로 이동하거나 로그인하지 않습니다.</div></div>`}
+  function enterNewTab(){s.browserCounter+=1;const id='new-'+s.browserCounter;s.browserTabs.push({id,site:'new'});s.browserActiveTab=id;s.browserAddressDraft='';s.browserError='';render();const input=document.querySelector('#browser-address');if(input){input.focus();input.select();}}
+  function selectBrowserTab(id){const t=s.browserTabs.find(v=>v.id===id);if(!t)return;s.browserActiveTab=t.id;s.browserError='';s.browserAddressDraft='';if(t.site!=='new'){s.stage=t.site;if(s.browserGoal===t.site)s.browserGoal='';}render();}
+  function closeBrowserTab(id){const idx=s.browserTabs.findIndex(t=>t.id===id);if(idx<0)return;const wasActive=s.browserActiveTab===id;s.browserTabs.splice(idx,1);if(!s.browserTabs.length){s.browserCounter++;const next='new-'+s.browserCounter;s.browserTabs.push({id:next,site:'new'});}if(wasActive){const next=s.browserTabs[Math.max(0,Math.min(idx,s.browserTabs.length-1))];s.browserActiveTab=next.id;if(next.site!=='new')s.stage=next.site;}s.browserAddressDraft='';s.browserError='';render();}
+  function requestBrowserSite(site){if(!canGo(site)){go(site);return;}const existing=s.browserTabs.find(t=>t.site===site);if(existing){showTransition(siteLabel(site)+' 탭으로 이동하고 있어요',()=>selectBrowserTab(existing.id),900);return;}s.browserGoal=site;s.browserError='';render();notify('Chrome 위쪽 + 새 탭을 누르고 주소를 입력해 보세요.');}
+  function browserSiteFromUrl(input){let v=String(input||'').trim().toLowerCase();if(!v)return null;v=v.replace(/^https?:\/\//,'').replace(/^www\./,'').split(/[/?#]/)[0].replace(/:\d+$/,'');if(v==='chatgpt.com')return 'chat';if(v==='github.com')return 'github';if(v==='vercel.com')return 'vercel';if(s.deployed&&v===slug(s.projectName)+'.vercel.app')return 'result';return null;}
+  function visitSiteFromAddress(input){const site=browserSiteFromUrl(input);if(!site){s.browserError='이 연습에서는 chatgpt.com, github.com, vercel.com 주소만 열 수 있어요.';render();notify(s.browserError);return;}if(s.browserGoal&&site!==s.browserGoal){s.browserError='이번 단계에서는 '+({github:'github.com',vercel:'vercel.com',chat:'chatgpt.com'})[s.browserGoal]+' 주소를 입력해 주세요.';render();notify(s.browserError);return;}if(!canGo(site)){notify('먼저 현재 단계의 작업을 마쳐 주세요.');return;}
+    showTransition(({chat:'ChatGPT',github:'GitHub',vercel:'Vercel',result:'배포 홈페이지'})[site]+'에 접속하고 있어요',()=>{
+      const t=activeBrowserTab();const existing=s.browserTabs.find(x=>x.site===site&&x.id!==t.id);
+      if(existing){s.browserTabs=s.browserTabs.filter(x=>x.id!==t.id);s.browserActiveTab=existing.id;}
+      else {t.site=site;s.browserActiveTab=t.id;}
+      const previousSite=s.stage;s.stage=site;
+      if(site==='github'&&previousSite!=='github')s.repoScreen=s.mode==='free'?(s.githubLoggedIn?(s.repoCreated?'repo':'dashboard'):'landing'):(s.pushCount?'repo':'landing');
+      if(site==='vercel'&&previousSite!=='vercel'&&!s.vercelLoggedIn)s.vercelScreen='landing';
+      s.browserGoal='';s.browserAddressDraft='';s.browserError='';render();notify('새 탭에서 '+siteLabel(site)+'(을)를 열었어요.');
+    },1250);
   }
   function address(){if(s.stage==='chat')return s.chatScreen==='input'?'chatgpt.com':'chatgpt.com / Codex 실습';if(s.stage==='github')return 'github.com/'+(s.repoScreen==='login'?'login':s.repoScreen==='signup'?'signup':s.repoScreen==='new-repo'?'new':s.repoScreen==='repo'||s.repoScreen==='editor'||s.repoScreen==='file'?s.githubUser+'/'+s.repoName:'');if(s.stage==='vercel')return 'vercel.com/'+(s.vercelScreen==='login'?'login':s.vercelScreen==='import'?'new':s.vercelScreen==='configure'?'new/'+slug(s.repoName):'');return 'https://'+slug(s.projectName)+'.vercel.app (모의)'}
   const svgGithub=`<svg viewBox="0 0 24 24" width="23" height="23" fill="currentColor" aria-hidden="true"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-1.9c-3.14.68-3.8-1.33-3.8-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.03-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 .17 1.6-.41 1.98-.78.1-.73.39-1.22.71-1.5-2.5-.28-5.12-1.25-5.12-5.56 0-1.22.44-2.22 1.16-3.01-.12-.29-.5-1.43.11-2.98 0 0 .95-.31 3.1 1.15a10.75 10.75 0 0 1 5.65 0c2.15-1.46 3.1-1.15 3.1-1.15.61 1.55.23 2.69.11 2.98a4.32 4.32 0 0 1 1.15 3.01c0 4.32-2.62 5.28-5.13 5.55.4.35.76 1.03.76 2.09v3.1c0 .3.2.65.78.54A11.25 11.25 0 0 0 12 .75Z"/></svg>`;
@@ -286,10 +362,16 @@
   function githubLanding(){return `<div class="github-public"><div class="gh-public-nav"><span class="gh-public-mark">${svgGithub}</span><span>Product ▾ &nbsp;&nbsp; Solutions ▾ &nbsp;&nbsp; Resources ▾ &nbsp;&nbsp; Open Source ▾ &nbsp;&nbsp; Enterprise ▾</span><span style="margin-left:auto"></span><button class="dark-text-link" data-action="github-login">Sign in</button><button class="gh-outline ${s.guide?'focus-target':''}" data-action="github-signup">Sign up</button></div><div class="gh-hero"><div class="eyebrow">GITHUB · CODE COLLABORATION</div><h2>Build and ship software on a single, collaborative platform</h2><p>Join the world's most widely adopted AI-powered developer platform.</p><div style="display:flex;gap:10px;flex-wrap:wrap"><button class="hero-light ${s.guide?'focus-target':''}" data-action="github-login">Sign in →</button><button class="hero-outline" data-action="github-signup">Sign up for GitHub</button></div><div class="gh-hero-notice">교육용 화면 · 실제 GitHub 웹사이트 아님</div></div></div>`}
   function githubLogin(){return `<div class="github-login-page"><div class="login-center"><div class="logo-center">${svgGithub}</div><h2>Sign in to GitHub</h2><section class="login-panel"><label class="form-label" for="github-user">Username or email address</label><input id="github-user" class="input" value="${esc(s.githubUser)}" placeholder="demo-student" autocomplete="off"><div class="login-row"><label class="form-label" for="fake-password">Password</label><span>Forgot password?</span></div><input id="fake-password" class="input" type="text" value="●●●●●●●●" readonly aria-label="연습용 비밀번호, 입력할 수 없음"><div class="safe-login">ⓘ 이 화면에서는 실제 비밀번호를 입력하지 않습니다. 아래 버튼을 눌러 체험 계정으로 계속하세요.</div><button class="g-btn green full ${s.guide?'focus-target':''}" data-action="github-signin">Sign in (모의 로그인)</button></section><div class="login-panel login-alt">New to GitHub? <button data-action="github-signup">Create an account</button></div><p class="login-footer">Terms · Privacy · Docs · Contact GitHub Support</p></div></div>`}
   function githubSignup(){return `<div class="github-login-page"><div class="login-center"><div class="logo-center">${svgGithub}</div><h2>Create your account</h2><section class="login-panel"><p>GitHub 회원가입 과정을 소개합니다. 실제 회원가입이나 이메일 인증은 하지 않습니다.</p><div class="fake-signup-step"><b>1</b> 이메일 주소 준비</div><div class="fake-signup-step"><b>2</b> 비밀번호와 사용자 이름 설정</div><div class="fake-signup-step"><b>3</b> 계정 인증 후 로그인</div><button class="g-btn green full" data-action="github-signup-complete">연습 계정 생성하고 로그인</button></section><p style="text-align:center"><button data-action="github-login" class="g-btn">Already have an account? Sign in</button></p></div></div>`}
-  function vercelLanding(){return `<div class="vercel-public"><div class="vp-top"><span class="vp-logo"><b>▲</b> vercel</span><div>Products &nbsp;&nbsp; Solutions &nbsp;&nbsp; Resources &nbsp;&nbsp; Enterprise &nbsp;&nbsp; Pricing</div><div style="margin-left:auto;display:flex;gap:12px"><button class="v-btn outline" data-action="vercel-login">Log In</button><button class="v-btn white ${s.guide?'focus-target':''}" data-action="vercel-login">Sign Up</button></div></div><div class="vp-hero"><span class="vp-hero-chip">Develop. Preview. Ship.</span><h2>Build and deploy on the AI Cloud.</h2><p>Start with the Git repository you've just created.</p><div style="display:flex;gap:11px;justify-content:center;flex-wrap:wrap"><button class="v-btn white ${s.guide?'focus-target':''}" data-action="vercel-login">Start Deploying →</button><button class="v-btn outline" data-action="vercel-login">Log in</button></div><small>교육용으로 재구성한 시작 화면 · 실제 Vercel 아님</small></div></div>`}
+  function vercelLanding(){return `<div class="vercel-public"><div class="vp-top"><span class="vp-logo"><b>▲</b> vercel</span><div>Products &nbsp;&nbsp; Solutions &nbsp;&nbsp; Resources &nbsp;&nbsp; Enterprise &nbsp;&nbsp; Pricing</div><div style="margin-left:auto;display:flex;gap:12px"><button class="v-btn outline ${s.guide?'focus-target':''}" data-action="vercel-login">Log In</button><button class="v-btn white" data-action="vercel-login">Sign Up</button></div></div><div class="vp-hero"><span class="vp-hero-chip">Develop. Preview. Ship.</span><h2>Build and deploy on the AI Cloud.</h2><p>Start with the Git repository you've just created.</p><div style="display:flex;gap:11px;justify-content:center;flex-wrap:wrap"><button class="v-btn white" data-action="vercel-login">Start Deploying →</button><button class="v-btn outline" data-action="vercel-login">Log in</button></div><small>교육용으로 재구성한 시작 화면 · 실제 Vercel 아님</small></div></div>`}
   function vercelLogin(){return `<div class="vercel-login"><div class="vercel-login-header"><span class="vp-logo"><b>▲</b> vercel</span><span class="v-muted">Need help?</span></div><div class="vercel-login-card"><div class="login-vercel-mark">▲</div><h2>Log in to Vercel</h2><p>To continue, choose a login method</p><button class="provider github-provider ${s.guide?'focus-target':''}" data-action="vercel-github-login">${svgGithub} <span>Continue with GitHub</span></button><button class="provider purple" data-action="provider-unsupported">◆ <span>Continue with GitLab</span></button><button class="provider provider-blue" data-action="provider-unsupported">▰ <span>Continue with Bitbucket</span></button><div class="provider-divider">or</div><button class="provider provider-white" data-action="provider-unsupported">⌑ <span>Continue with SAML SSO</span></button><button class="provider provider-white" data-action="provider-unsupported">◉ <span>Log in with Passkey</span></button><button class="email-link" data-action="provider-unsupported">Continue with Email →</button><div class="safe-login">모의 로그인: 실제 이메일이나 비밀번호는 사용하지 않습니다.</div></div></div>`}
 
-  function browser(){const service=s.stage==='chat'?'ChatGPT':s.stage==='github'?'GitHub':s.stage==='vercel'?'Vercel':'나의 홈페이지';return `<section class="desktop-frame" aria-label="Windows 11 데스크톱 브라우저 모의 화면"><div class="sim-window windows-window"><div class="win-titlebar"><div class="win-brand"><span class="edge-symbol">e</span> Edge</div><div class="win-tab"><span>🌐 ${service} · 연습</span><span class="tab-close">×</span></div><div class="win-controls" aria-hidden="true"><span>−</span><span>□</span><span>×</span></div></div><div class="browser-chrome"><div class="browser-nav"><button title="이전 화면" data-action="browser-back" aria-label="이전 화면">←</button><button title="새로고침" data-action="browser-refresh" aria-label="새로고침">⟳</button></div><div class="addressbar"><span class="lock">⌑</span><span>${esc(address())}</span><span style="margin-left:auto;font-size:10px;color:#778ca4">모의 사이트</span></div><span style="font-size:17px;color:#8794a8">⋯</span></div><div class="app-surface">${s.stage==='chat'?chat():s.stage==='github'?github():s.stage==='vercel'?vercel():result()}</div>${authPopup()}</div><div class="windows-taskbar" aria-label="윈도우 11 작업 표시줄 모의 화면"><span class="task-icon"><span class="win-start-logo"><i></i><i></i><i></i><i></i></span></span><span class="task-icon">⌕</span><span class="task-icon">▣</span><span class="task-icon active"><span class="edge-symbol">e</span></span><span class="task-icon">▤</span><span class="task-clock">교육용 Windows<br>데스크톱</span></div></section>`}
+  function browser(){
+    const t=activeBrowserTab(),blank=t.site==='new';
+    const tabs=s.browserTabs.map(browserTabMarkup).join('');
+    const currentUrl=blank?(s.browserAddressDraft||''):s.browserAddressDraft||'https://'+String(address()).replace(/^https?:\/\//,'').replace(/ \(모의\)$/,'');
+    const browserBody=blank?browserNewTab():(s.stage==='chat'?chat():s.stage==='github'?github():s.stage==='vercel'?vercel():result());
+    return `<section class="desktop-frame" aria-label="Windows 11 Chrome 브라우저 가상 실습"><div class="sim-window windows-window"><div class="win-titlebar chrome-titlebar"><div class="chrome-tablist" role="tablist" aria-label="Chrome 브라우저 탭">${tabs}</div><button type="button" title="새 탭" aria-label="새 탭 열기" class="chrome-newtab-button ${s.guide&&s.browserGoal&&!blank?'focus-target':''}" data-action="browser-new-tab">+</button><div class="win-controls" aria-hidden="true"><span>−</span><span>□</span><span>×</span></div></div><div class="browser-chrome chrome-address-row"><div class="browser-nav"><button title="이전 화면" data-action="browser-back" aria-label="이전 화면">←</button><button title="새로고침" data-action="browser-refresh" aria-label="새로고침">⟳</button></div><form id="browser-address-form" class="addressbar chrome-omnibox"><span class="lock">${blank?'⌕':'🔒'}</span><input id="browser-address" autocomplete="off" spellcheck="false" aria-label="Chrome 주소창" placeholder="Google에서 검색하거나 URL 입력" value="${esc(currentUrl)}" class="${blank&&s.guide?'focus-target':''}"><span class="address-note">${blank?'↵ Enter':'모의 사이트'}</span></form><span class="chrome-top-right" aria-hidden="true">⋮</span></div><div class="app-surface">${browserBody}</div>${!blank?authPopup():''}</div><div class="windows-taskbar" aria-label="Windows 11 작업 표시줄"><span class="task-icon"><span class="win-start-logo"><i></i><i></i><i></i><i></i></span></span><span class="task-icon">⌕</span><span class="task-icon">▣</span><span class="task-icon active"><span class="chrome-mark"></span></span><span class="task-icon">▤</span><span class="task-clock">교육용 Windows<br>데스크톱</span></div></section>`;
+  }
 
 
   function freeChat(){
@@ -363,6 +445,8 @@
 
   function result(){return `<div class="preview-outer"><div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap"><div><div style="font-size:10px;color:#198b65;font-weight:800;letter-spacing:1px">SIMULATED DEPLOYMENT COMPLETE</div><h2 style="margin:2px 0 0;font-size:24px">나의 첫 웹사이트 완성!</h2></div><button class="secondary small" data-action="edit-again">↻ 코드 수정하고 재배포</button></div><div class="callout">이 페이지는 Vercel에 실제 게시된 것이 아닌 <strong>시뮬레이터 내부 미리보기</strong>입니다. 아래 결과물은 GitHub에서 커밋한 코드로 렌더링했습니다.</div><div class="preview-frame"><div class="preview-head"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span style="margin-left:12px">https://${esc(slug(s.projectName))}.vercel.app (가상 주소)</span></div><iframe title="배포된 홈페이지 모의 미리보기" sandbox="" srcdoc="${esc(s.deployedCode)}"></iframe></div><div style="margin-top:15px;display:flex;flex-wrap:wrap;gap:10px"><button class="primary" data-action="restart">새로운 배포 실습 시작</button><button class="secondary" data-go="vercel">Vercel 화면으로 돌아가기</button></div></div>`}
   function detail(){
+    if(s.browserGoal){const site=siteLabel(s.browserGoal),host=s.browserGoal==='github'?'github.com':s.browserGoal==='vercel'?'vercel.com':'chatgpt.com';return browserBlank()?{title:site+' 주소를 입력해요',desc:'상단 주소창에 '+host+'을 입력하고 Enter를 눌러 접속해요.',hint:'주소창은 브라우저 맨 위의 긴 입력칸이에요. 그대로 '+host+'을 입력하세요.',coach:'주소창에 '+host+'을 입력한 뒤 Enter를 눌러요.'}:{title:site+'를 새 탭에서 열어요',desc:'Chrome 상단의 + 버튼을 눌러 새 탭을 열어 보세요.',hint:'새 탭을 열면 ChatGPT 화면을 닫지 않고 GitHub·Vercel로 이동할 수 있어요.',coach:'위쪽 + 버튼을 눌러 새 탭을 만들어요.'};}
+    if(browserBlank())return {title:'새 탭에서 사이트로 이동해요',desc:'Chrome 주소창에 chatgpt.com, github.com, vercel.com 중 원하는 주소를 입력하고 Enter를 눌러요.',hint:'실습을 마치지 않은 서비스는 아직 열 수 없어요.',coach:'주소를 입력한 뒤 Enter를 눌러요.'};
     if(s.mode==='free'){
       if(s.modal==='commit')return {title:'GitHub에 변경 사항을 저장해요',desc:'Commit message를 확인하고 Commit changes를 눌러요.',hint:'커밋은 나중에 코드를 되돌릴 수 있도록 변경 기록을 남기는 작업이에요.',coach:'Commit changes를 눌러요.'};
       if(s.stage==='chat')return s.chatScreen==='input'?{title:'무료 실습: 프롬프트 입력',desc:'홈페이지를 만들어 달라는 문장을 적고 ↑ 버튼을 눌러요.',hint:'예: 우리 반 소개 홈페이지를 만들어줘.',coach:'프롬프트를 적고 전송해요.'}:{title:s.clip?'복사한 코드를 GitHub로 옮겨요':'AI가 만든 코드를 복사해요',desc:s.clip?'GitHub로 이동 버튼을 눌러 직접 저장소와 파일을 만들어요.':'코드 복사 버튼을 누른 뒤 GitHub로 이동해요.',hint:'파일은 index.html이라는 이름으로 저장할 거예요.',coach:s.clip?'GitHub로 이동해요.':'코드 복사를 눌러요.'};
@@ -388,6 +472,7 @@
   // The explanation changes with every learner-visible screen, including login dialogs.
   // Time labels describe common real-world usage, not permanent authentication guarantees.
   function learningInfo(){
+    if(s.browserGoal||browserBlank()){const site=siteLabel(s.browserGoal||'github');return {title:'새 탭은 다른 사이트에 이동할 때 사용해요',why:'ChatGPT에서 만든 코드를 GitHub에 보관하고 Vercel에서 배포하려면 각각 다른 웹사이트에 방문해요. 기존 탭을 남겨두면 나중에 다시 확인하기 편해요.',when:'새로운 사이트를 처음 방문할 때마다',after:'한 번 열어둔 탭은 다시 만들지 않고 위쪽 탭 제목을 눌러 돌아갈 수 있어요.',term:'새 탭(New tab) = 현재 페이지를 닫지 않고 새 웹사이트를 여는 Chrome 기능'};}
     if(s.mode==='free'){
       if(s.modal==='commit')return {title:'커밋은 파일의 수정 기록을 남기는 과정이에요',why:'GitHub는 파일만 저장하는 곳이 아니라 언제 무엇이 바뀌었는지 기록해요. Commit changes를 눌러야 index.html이 저장소에 저장됩니다.',when:'새 파일이나 수정 내용을 등록할 때마다',after:'한 번 만든 저장소는 계속 사용하고 파일만 수정·커밋하면 돼요. Vercel이 연결되어 있으면 새 커밋 뒤 자동 재배포될 수 있어요.',term:'커밋(Commit) = 지금 파일의 상태를 변경 기록으로 저장하는 것'};
       if(s.stage==='chat')return s.chatScreen==='input'?{title:'무료 계정으로도 홈페이지 코드를 만들 수 있어요',why:'AI에게 홈페이지의 용도와 모습을 말로 설명하면 코드를 얻을 수 있어요. 이번 연습은 API 호출 없이 예제 코드를 생성합니다.',when:'홈페이지를 처음 만들거나 수정할 때마다',after:'AI에서 만든 파일을 복사해 GitHub에 등록합니다. 코딩 에이전트의 자동 푸시 기능 없이도 진행할 수 있어요.',term:'프롬프트 = AI에게 만들고 싶은 것을 알려주는 문장'}:{title:'왜 코드를 복사해야 할까요?',why:'무료 실습에서는 AI가 GitHub에 직접 푸시하지 않아요. ChatGPT가 만든 코드를 복사해 GitHub에 HTML 파일로 저장하면 Vercel이 그 파일을 배포할 수 있어요.',when:'새 파일을 올리거나 코드를 수정할 때마다',after:'기존 홈페이지라면 같은 GitHub 저장소의 index.html을 수정해 새 커밋을 남기면 됩니다.',term:'index.html = 브라우저에서 첫 화면으로 여는 웹페이지 파일'};
@@ -459,6 +544,8 @@
   function bindText(){
     const bindings=[['prompt-input','prompt'],['github-user','githubUser'],['repo-name','repoName'],['file-name','fileName'],['code-editor','editorCode'],['commit-message','commitMessage'],['project-name','projectName'],['repo-filter','repoFilter'],['agent-repo-name','repoName'],['agent-github-user','githubUser']];
     bindings.forEach(([id,key])=>{const el=$('#'+id);if(el)el.addEventListener('input',()=>{s[key]=el.value;persist();if(id==='repo-filter'){const at=el.selectionStart;render();const n=$('#repo-filter');if(n){n.focus();n.setSelectionRange(at,at)}}})});
+    const addressForm=$('#browser-address-form');if(addressForm)addressForm.addEventListener('submit',e=>{e.preventDefault();const input=$('#browser-address');if(input)visitSiteFromAddress(input.value);});
+    const addressInput=$('#browser-address');if(addressInput)addressInput.addEventListener('input',()=>{s.browserAddressDraft=addressInput.value;persist();});
     const f=$('#prompt-form');if(f)f.addEventListener('submit',e=>{e.preventDefault();if(!s.prompt.trim()){notify('만들고 싶은 홈페이지를 먼저 설명하세요.');return;}if(promptTimer)return;s.kind=determineKind(s.prompt);s.chatScreen='generating';s.code='';if(s.mode==='free')s.clip='';render();const submitted=s.prompt;promptTimer=setTimeout(()=>{promptTimer=null;if(s.chatScreen!=='generating'||s.prompt!==submitted)return;s.code=template(s.kind,s.prompt);s.chatScreen='response';render();notify('홈페이지 코드가 준비됐어요.')},1550)});
     document.querySelectorAll('input[name="visibility"]').forEach(el=>el.addEventListener('change',()=>{s.visibility=el.value;persist()}));
     document.querySelectorAll('input[name="agent-visibility"]').forEach(el=>el.addEventListener('change',()=>{s.visibility=el.value;persist()}));
@@ -468,10 +555,11 @@
   }
 
   function showPreview(code){const blob=new Blob([code],{type:'text/html'});const url=URL.createObjectURL(blob);const w=window.open('about:blank','_blank');if(!w){notify('팝업 차단을 해제하거나 브라우저 설정을 확인해주세요.');URL.revokeObjectURL(url);return;}w.document.write(`<html lang="ko"><meta charset="utf-8"><title>모의 홈페이지 미리보기</title><style>body{margin:0;font-family:Arial,sans-serif}header{background:#151b25;color:#fff;padding:10px 15px;font-size:12px}iframe{width:100%;height:calc(100vh - 38px);border:0}</style><header>모의 홈페이지 미리보기 · 실제 배포 아님</header><iframe id="sample" sandbox=""></iframe></html>`);w.document.close();w.document.getElementById('sample').srcdoc=code;setTimeout(()=>URL.revokeObjectURL(url),1000)}
+  let lastClickedTab='';
   function handle(action){switch(action){
     case 'copy-code':s.clip=s.code;persist();if(navigator.clipboard?.writeText)navigator.clipboard.writeText(s.code).catch(()=>{});render();notify(s.mode==='free'?'코드 복사 완료! GitHub에서 index.html에 붙여넣어요.':'코드 복사 완료! 자동화 실습에서는 AI가 직접 푸시해요.');break;
     case 'show-code-preview':showPreview(s.code);break;
-    case 'next-github':if(s.mode==='free'){if(!s.code){notify('ChatGPT에서 코드를 먼저 만들어 주세요.');return;}if(!s.clip){notify('코드를 복사하지 않았어요. 코드 복사 버튼을 먼저 눌러 주세요.');return;}s.stage='github';s.repoScreen=s.githubLoggedIn?(s.repoCreated?'repo':'dashboard'):'landing';render();break;}if(!s.pushCount){notify('먼저 AI가 GitHub로 푸시하도록 해 주세요.');return;}s.stage='github';s.repoScreen='repo';render();break;
+    case 'next-github':if(s.mode==='free'&&(!s.code||!s.clip)){notify('먼저 코드를 만들고 코드 복사를 눌러 주세요.');return;}if(s.mode!=='free'&&!s.pushCount){notify('먼저 AI가 GitHub로 푸시하도록 해 주세요.');return;}requestBrowserSite('github');break;
     case 'connect-agent':if(!s.code){notify('프롬프트를 입력해 홈페이지를 먼저 만들어 주세요.');return;}s.modal=s.agentConnected?'agent-push':'agent-connect';render();break;
     case 'agent-continue':s.modal=s.githubLoggedIn?'agent-permissions':'agent-signin';render();break;
     case 'agent-signin':if(!/^[a-zA-Z0-9-]{2,35}$/.test(s.githubUser)){notify('영문 2자 이상의 체험 계정 이름을 입력해 주세요.');return;}s.githubLoggedIn=true;s.modal='agent-permissions';render();notify('GitHub 모의 로그인 완료');break;
@@ -496,7 +584,7 @@
     case 'open-commit':if(s.fileName!=='index.html'){notify('파일 이름을 index.html로 지정하세요.');return;}if(!s.editorCode.trim()||!/<html[\s>]/i.test(s.editorCode)||!/<body[\s>]/i.test(s.editorCode)){notify('유효한 HTML 코드를 붙여넣어 주세요.');return;}s.modal='commit';render();break;
     case 'modal-close':s.modal='';render();break;
     case 'save-commit':if(!s.commitMessage.trim()){notify('커밋 메시지를 입력하세요.');return;}s.modal='';s.committedCode=s.editorCode;s.commitCount++;s.repoScreen='repo';if(s.mode==='free'&&s.everDeployed){s.deployed=true;s.deployedCode=s.committedCode;s.vercelScreen='success'}else if(s.deployed){s.deployed=false;s.deployedCode='';s.vercelScreen='dashboard'}render();notify(s.mode==='free'&&s.everDeployed?'커밋 저장 완료! 연결된 Vercel 자동 재배포도 모의 완료했어요.':'Commit changes 완료!');break;
-    case 'next-vercel':if(!s.commitCount){notify('GitHub에 코드를 커밋한 뒤 이동하세요.');return;}s.stage='vercel';s.vercelScreen=(s.everDeployed&&s.deployed)?'success':(s.vercelLoggedIn?'dashboard':'landing');render();break;
+    case 'next-vercel':if(!s.commitCount){notify('GitHub에 코드를 커밋한 뒤 이동하세요.');return;}requestBrowserSite('vercel');break;
     case 'vercel-login':s.vercelScreen='login';render();break;
     case 'vercel-github-login':if(!s.githubLoggedIn){s.modal='oauth';s.modalReturn='login';render();return;}s.modal='oauth';render();break;
     case 'oauth-allow':s.githubAuthorized=true;s.modal='install';render();break;
@@ -507,15 +595,21 @@
     case 'vercel-import':if(!s.committedCode){notify('GitHub에 커밋된 index.html이 필요합니다.');return;}if(!s.githubAppInstalled){s.modal='install';render();return;}s.selectedRepo=true;s.projectName=s.projectName||slug(s.repoName);s.vercelScreen='configure';render();break;
     case 'provider-unsupported':notify('이 교육용 과정에서는 GitHub 로그인으로 진행합니다.');break;
     case 'deploy':if(!s.projectName.trim()){notify('프로젝트 이름을 입력하세요.');return;}if(s.framework!=='Other'){notify('HTML 단일 파일은 Framework Preset을 Other로 선택하세요.');return;}if(!s.githubAppInstalled||!s.committedCode){notify('GitHub 권한과 커밋된 파일을 확인하세요.');return;}s.vercelScreen='deploying';s.deployLogStep=0;render();break;
-    case 'visit':if(!s.deployed){notify('배포를 완료한 뒤 방문하세요.');return;}s.stage='result';render();break;
-    case 'edit-again':s.stage='chat';s.chatScreen='response';s.deployed=false;s.deployedCode='';if(s.mode==='free')s.clip='';render();notify(s.mode==='free'?'AI에게 새 코드를 요청한 후, GitHub의 기존 파일을 수정해 커밋해 보세요.':'프롬프트를 수정하고 AI에 다시 푸시를 요청해 보세요.');break;
+    case 'visit':if(!s.deployed){notify('배포를 완료한 뒤 방문하세요.');return;}const existingResult=s.browserTabs.find(t=>t.site==='result');if(existingResult){selectBrowserTab(existingResult.id)}else{s.browserCounter++;const resultId='site-'+s.browserCounter;s.browserTabs.push({id:resultId,site:'result'});s.browserActiveTab=resultId;s.stage='result';s.browserGoal='';render()}break;
+    case 'edit-again':s.chatScreen='response';s.deployed=false;s.deployedCode='';if(s.mode==='free')s.clip='';const chatTab=s.browserTabs.find(t=>t.site==='chat');if(chatTab){s.browserActiveTab=chatTab.id;s.stage='chat'}else{s.browserTabs.push({id:'chat',site:'chat'});s.browserActiveTab='chat';s.stage='chat'}render();notify(s.mode==='free'?'AI에게 새 코드를 요청한 후, GitHub의 기존 파일을 수정해 커밋해 보세요.':'프롬프트를 수정하고 AI에 다시 푸시를 요청해 보세요.');break;
     case 'mode-auto':switchMode('auto');break;
     case 'mode-free':switchMode('free');break;
     case 'toggle-basics':s.basicsOpen=!s.basicsOpen;render();break;
     case 'guide-on':s.guide=true;s.hint=false;render();break;
     case 'guide-off':s.guide=false;s.hint=false;render();break;
     case 'hint-toggle':s.hint=!s.hint;render();break;
-    case 'browser-refresh':render();notify('모의 화면 새로고침');break;
+    case 'browser-new-tab':enterNewTab();break;
+    case 'browser-select-tab':selectBrowserTab(lastClickedTab||s.browserActiveTab);break;
+    case 'browser-close-tab':closeBrowserTab(lastClickedTab||s.browserActiveTab);break;
+    case 'shortcut-chat':visitSiteFromAddress('chatgpt.com');break;
+    case 'shortcut-github':visitSiteFromAddress('github.com');break;
+    case 'shortcut-vercel':visitSiteFromAddress('vercel.com');break;
+    case 'browser-refresh':s.browserAddressDraft='';render();notify('모의 화면 새로고침');break;
     case 'browser-back':if(s.modal){s.modal='';render();return;}if(s.stage==='github'){s.repoScreen=s.repoScreen==='dashboard'?'landing':s.repoScreen==='new-repo'?'dashboard':s.repoScreen==='editor'?'repo':'landing';render()}else if(s.stage==='vercel'){s.vercelScreen=s.vercelScreen==='import'?'dashboard':s.vercelScreen==='configure'?'import':'landing';render()}else {notify('화면 위쪽의 단계 버튼을 이용하세요.')}break;
     case 'restart':if(!window.confirm('현재 탭의 실습 진행 상황을 초기화할까요?'))return;clearInterval(deployTimer);deployTimer=null;clearInterval(agentTimer);agentTimer=null;clearTimeout(promptTimer);promptTimer=null;clearTimeout(transitionTimer);transitionTimer=null;const currentMode=s.mode;const modeSaves=s.modeSaves||{};delete modeSaves[currentMode];s={...defaults(),mode:currentMode,modeSaves};render();notify('현재 탭에서 새 실습을 시작했습니다.');break;
   }}
@@ -533,11 +627,10 @@
   document.addEventListener('click',e=>{
     if(transitionTimer)return;
     const goBtn=e.target.closest('[data-go]');
-    if(goBtn){const dest=goBtn.dataset.go;if(dest!==s.stage&&canGo(dest)){showTransition(({'chat':'AI 작업 화면','github':'GitHub','vercel':'Vercel','result':'배포 결과'})[dest]+'(으)로 이동하고 있어요',()=>go(dest),1100)}else go(dest);return}
+    if(goBtn){const dest=goBtn.dataset.go;if(dest===s.stage&&!browserBlank()){render();return;}requestBrowserSite(dest);return}
     const btn=e.target.closest('[data-action]');if(!btn)return;
-    const action=btn.dataset.action;
+    const action=btn.dataset.action;if(action==='browser-select-tab'||action==='browser-close-tab')lastClickedTab=btn.dataset.tab;
     const waits={
-      'next-github':['GitHub를 열고 있어요',1200], 'next-vercel':['Vercel을 열고 있어요',1200],
       'github-login':['GitHub 로그인 화면을 열고 있어요',1050], 'github-signin':['GitHub 계정에 로그인하고 있어요',1100],
       'github-signup-complete':['GitHub 계정을 준비하고 있어요',1100], 'github-new':['새 저장소 화면을 열고 있어요',980],
       'create-repo':['GitHub 저장소를 만들고 있어요',1200], 'new-file':['파일 편집 화면을 여는 중이에요',920],
